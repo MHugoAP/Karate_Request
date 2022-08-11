@@ -7,7 +7,7 @@ Feature: Service client Get
   Background: consume service
     * url url
 
-  Scenario: Check the service get method
+  Scenario: Check the service GET method
 
     Given path 'users', '2'
     When method get
