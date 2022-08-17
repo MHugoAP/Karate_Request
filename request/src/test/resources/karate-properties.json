@@ -2,6 +2,7 @@
   "dev": {
     "url": "https://reqres.in/api/",
     "name": "morpheus",
-    "job": "leader"
+    "job": "leader",
+    "email": "janet.weaver@reqres.in"
   }
 }
