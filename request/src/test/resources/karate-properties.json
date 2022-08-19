@@ -3,6 +3,12 @@
     "url": "https://reqres.in/api/",
     "name": "morpheus",
     "job": "leader",
-    "email": "janet.weaver@reqres.in"
+    "email": "janet.weaver@reqres.in",
+    "id": "#number",
+    "idGet": 2,
+    "firstName":  "Janet",
+    "lastName": "Weaver",
+    "avatar": "https://reqres.in/img/faces/2-image.jpg",
+    "support": "https://reqres.in/#support-heading"
   }
 }

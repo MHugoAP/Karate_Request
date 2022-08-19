@@ -15,3 +15,17 @@ Feature: Service client POST
     When method post
     Then status 201
     And match response == responsePost
+    And assert response.name == name
+    And assert response.job == job
+
+  Scenario Outline: Create a user with different idUser
+
+    Given path 'users', <idUser>
+    When method get
+    Then status <statusCode>
+
+    Examples:
+      | idUser    | statusCode |
+      | 1996      | 404        |
+      | "@#$%^&." | 404        |
+      | "miguel"  | 404        |
