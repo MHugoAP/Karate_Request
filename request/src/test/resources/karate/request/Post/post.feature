@@ -1,4 +1,4 @@
-Feature: Service client Get
+Feature: Service client Post
 
   As QA Automation
   I want to consult a client
@@ -7,14 +7,14 @@ Feature: Service client Get
   Background: consume service
     * url url
 
-  Scenario: Check the service GET method
+  Scenario: Check the service POST method
 
-    * def responseGet = read('classpath:karate/request/client_Consult_Get/responseGet.json')
+    * def responseGet = read('classpath:karate/request/Post/post.json')
 
     Given path 'users', '2'
-    When method get
+    When method post
     Then status 200
-    And match response == responseGet
+    And match response == post
     And assert response.support.url == support
     And assert response.support.text == "To keep ReqRes free, contributions towards server costs are appreciated!"
     And assert response.data.email == email
@@ -26,7 +26,7 @@ Feature: Service client Get
   Scenario Outline: Users that don't exist
 
     Given path 'users', <idUser>
-    When method get
+    When method post
     Then status <statusCode>
 
     Examples:
