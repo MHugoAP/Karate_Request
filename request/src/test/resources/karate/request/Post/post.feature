@@ -8,13 +8,12 @@ Feature: Service client Post
     * url url
 
   Scenario: Check the service POST method
-
-    * def responseGet = read('classpath:karate/request/Post/post.json')
+    * def responseGet = read('classpath:karate/request/client_Consult_Get/responseGet.json')
 
     Given path 'users', '2'
-    When method post
+    When method get
     Then status 200
-    And match response == post
+    And match response == responseGet
     And assert response.support.url == support
     And assert response.support.text == "To keep ReqRes free, contributions towards server costs are appreciated!"
     And assert response.data.email == email
@@ -24,13 +23,15 @@ Feature: Service client Post
     And assert response.data.avatar == avatar
 
   Scenario Outline: Users that don't exist
+    * def requestCreate = {"name": '#(name)', "job": '#(job)'}
 
     Given path 'users', <idUser>
-    When method post
+    And request requestCreate
+    When method POST
     Then status <statusCode>
 
     Examples:
       | idUser    | statusCode |
-      | 1996      | 404        |
-      | "@#$%^&." | 404        |
-      | "miguel"  | 404        |
+      | 1996      | 201        |
+      | "@#$%^&." | 201        |
+      | "miguel"  | 201        |
