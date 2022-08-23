@@ -1,4 +1,4 @@
-package karate.request.client;
+package karate.request.put;
 
 import com.intuit.karate.junit5.Karate;
 
