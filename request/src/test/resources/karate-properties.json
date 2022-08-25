@@ -1,6 +1,7 @@
 {
   "dev": {
-    "url": "https://reqres.in/api/",
+    "url": "https://reqres.in/",
+    "urlLogin": "https://reqres.in/api/",
     "name": "morpheus",
     "job": "leader",
     "email": "janet.weaver@reqres.in",
@@ -9,6 +10,9 @@
     "firstName":  "Janet",
     "lastName": "Weaver",
     "avatar": "https://reqres.in/img/faces/2-image.jpg",
-    "support": "https://reqres.in/#support-heading"
+    "support": "https://reqres.in/#support-heading",
+    "emailLogin": "eve.holt@reqres.in",
+    "emailLoginUnsuss": "peter@klaven",
+    "passwordLogin": "cityslicka"
   }
 }
